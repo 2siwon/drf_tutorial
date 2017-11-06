@@ -18,6 +18,6 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    url(r'^snippet', include('snippets.urls', namespace='snippets')),
+    url(r'^snippets/', include('snippets.urls', namespace='snippets')),
     url(r'^admin/', admin.site.urls),
 ]
