@@ -6,7 +6,7 @@ from ..serializers import SnippetSerializer
 
 
 class SnippetViewSet(viewsets.ModelViewSet):
-    Queryset = Snippet.objects.all()
+    queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
     serializer_class = (
         permissions.IsAuthenticatedOrReadOnly,

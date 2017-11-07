@@ -12,8 +12,8 @@ snippet_detail = SnippetViewSet.as_view({
     'patch': 'partial_update',
     'delete': 'destroy',
 })
+
 urlpatterns = [
     url(r'^$', snippet_list, name='snippet_list'),
     url(r'^(?P<pk>\d+)/$', snippet_detail, name='snippet_detail'),
-
 ]

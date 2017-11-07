@@ -1,7 +1,6 @@
-from django.conf.urls import include, url
+from django.conf.urls import url, include
 
-from snippets.urls import cbv_mixins, cbv_generics, cbv_viewsets_router
-from . import cbv, fbv
+from . import cbv, fbv, cbv_mixins, cbv_generics, cbv_viewsets_router
 
 urlpatterns = [
     url(r'^fbv/', include(fbv, namespace='fbv')),
