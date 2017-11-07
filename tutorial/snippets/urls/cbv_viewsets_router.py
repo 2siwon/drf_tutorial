@@ -5,6 +5,6 @@ from ..views.cbv_viewsets import SnippetViewSet
 router = DefaultRouter()
 router.register(r'', SnippetViewSet)
 
-urlpatterns = {
+urlpatterns = [
     url(r'^', include(router.urls)),
-}
+]

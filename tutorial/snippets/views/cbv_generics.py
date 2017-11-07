@@ -8,7 +8,9 @@ from ..serializers import SnippetSerializer
 class SnippetList(generics.ListCreateAPIView):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = (
+        permissions.IsAuthenticatedOrReadOnly,
+    )
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
