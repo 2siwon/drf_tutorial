@@ -1,6 +1,6 @@
 from rest_framework import generics, permissions
 
-from snippets.views.permissions import IsOwnerOrReadOnly
+from snippets.permissions import IsOwnerOrReadOnly
 from ..models import Snippet
 from ..serializers import SnippetSerializer
 
